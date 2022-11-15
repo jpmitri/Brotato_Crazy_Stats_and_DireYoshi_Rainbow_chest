@@ -1,0 +1,164 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ui/menus/shop/stat_container.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/themes/base_theme.tres" type="Theme" id=2]
+[ext_resource path="res://ui/menus/shop/stats_container.gd" type="Script" id=22]
+
+[node name="StatsContainer" type="PanelContainer"]
+self_modulate = Color( 1, 1, 1, 0.478431 )
+margin_top = 132.0
+margin_right = 336.0
+margin_bottom = 920.0
+theme = ExtResource( 2 )
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 331.0
+margin_bottom = 783.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 316.0
+margin_bottom = 768.0
+custom_constants/separation = 20
+
+[node name="StatsLabel" type="Label" parent="MarginContainer/VBoxContainer2"]
+margin_right = 306.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 8
+text = "STATS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EmptySpace" type="Control" parent="MarginContainer/VBoxContainer2"]
+margin_top = 100.0
+margin_right = 306.0
+margin_bottom = 161.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2"]
+margin_top = 181.0
+margin_right = 306.0
+margin_bottom = 676.0
+custom_constants/separation = 1
+
+[node name="MaxHPContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 306.0
+margin_bottom = 30.0
+key = "STAT_MAX_HP"
+
+[node name="HPRegenerationContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 31.0
+margin_right = 306.0
+margin_bottom = 61.0
+key = "STAT_HP_REGENERATION"
+
+[node name="LifeStealContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 62.0
+margin_right = 306.0
+margin_bottom = 92.0
+key = "STAT_LIFESTEAL"
+
+[node name="PercentDamageContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 93.0
+margin_right = 306.0
+margin_bottom = 123.0
+key = "STAT_PERCENT_DAMAGE"
+
+[node name="MeleeDamageContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 124.0
+margin_right = 306.0
+margin_bottom = 154.0
+key = "STAT_MELEE_DAMAGE"
+
+[node name="RangedDamageContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 155.0
+margin_right = 306.0
+margin_bottom = 185.0
+key = "STAT_RANGED_DAMAGE"
+
+[node name="ElementalDamageContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 186.0
+margin_right = 306.0
+margin_bottom = 216.0
+key = "STAT_ELEMENTAL_DAMAGE"
+
+[node name="AttackSpeedContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 217.0
+margin_right = 306.0
+margin_bottom = 247.0
+key = "STAT_ATTACK_SPEED"
+
+[node name="CritChanceContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 248.0
+margin_right = 306.0
+margin_bottom = 278.0
+key = "STAT_CRIT_CHANCE"
+
+[node name="EngineeringContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 279.0
+margin_right = 306.0
+margin_bottom = 309.0
+key = "STAT_ENGINEERING"
+
+[node name="RangeContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 310.0
+margin_right = 306.0
+margin_bottom = 340.0
+key = "STAT_RANGE"
+
+[node name="ArmorContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 341.0
+margin_right = 306.0
+margin_bottom = 371.0
+key = "STAT_ARMOR"
+
+[node name="DodgeContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 372.0
+margin_right = 306.0
+margin_bottom = 402.0
+key = "STAT_DODGE"
+
+[node name="SpeedContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 403.0
+margin_right = 306.0
+margin_bottom = 433.0
+key = "STAT_SPEED"
+
+[node name="LuckContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 434.0
+margin_right = 306.0
+margin_bottom = 464.0
+key = "STAT_LUCK"
+
+[node name="HarvestingContainer" parent="MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 465.0
+margin_right = 306.0
+margin_bottom = 495.0
+key = "STAT_HARVESTING"
+
+[node name="EmptySpace2" type="Control" parent="MarginContainer/VBoxContainer2"]
+margin_top = 696.0
+margin_right = 306.0
+margin_bottom = 758.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}

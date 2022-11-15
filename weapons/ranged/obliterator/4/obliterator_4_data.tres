@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
+[ext_resource path="res://weapons/ranged/obliterator/4/obliterator_4_stats.tres" type="Resource" id=2]
+[ext_resource path="res://weapons/ranged/obliterator/obliterator.tscn" type="PackedScene" id=3]
+[ext_resource path="res://weapons/ranged/obliterator/obliterator_icon.png" type="Texture" id=4]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "weapon_obliterator_4"
+unlocked_by_default = false
+icon = ExtResource( 4 )
+name = "WEAPON_OBLITERATOR"
+tier = 3
+value = 255
+effects = [  ]
+weapon_id = "weapon_obliterator"
+type = 1
+weapon_classes = [ 2 ]
+scene = ExtResource( 3 )
+stats = ExtResource( 2 )

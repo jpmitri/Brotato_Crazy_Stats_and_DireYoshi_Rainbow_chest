@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
+[ext_resource path="res://weapons/melee/dagger/dagger_icon.png" type="Texture" id=2]
+[ext_resource path="res://weapons/melee/dagger/dagger.tscn" type="PackedScene" id=3]
+[ext_resource path="res://weapons/melee/dagger/4/dagger_4_stats.tres" type="Resource" id=4]
+[ext_resource path="res://weapons/melee/dagger/4/dagger_4_effect.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "weapon_dagger_4"
+unlocked_by_default = true
+icon = ExtResource( 2 )
+name = "WEAPON_DAGGER"
+tier = 3
+value = 105
+effects = [ ExtResource( 5 ) ]
+weapon_id = "weapon_dagger"
+type = 0
+weapon_classes = [ 5 ]
+scene = ExtResource( 3 )
+stats = ExtResource( 4 )

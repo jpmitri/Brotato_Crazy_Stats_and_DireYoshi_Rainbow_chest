@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://items/all/explosive_shells/explosive_shells_effect_2.tres" type="Resource" id=1]
+[ext_resource path="res://items/all/explosive_shells/explosive_shells_effect_1.tres" type="Resource" id=2]
+[ext_resource path="res://items/all/explosive_shells/explosive_shells_icon.png" type="Texture" id=3]
+[ext_resource path="res://items/global/item_data.gd" type="Script" id=4]
+
+[resource]
+script = ExtResource( 4 )
+my_id = "item_explosive_shells"
+unlocked_by_default = false
+icon = ExtResource( 3 )
+name = "ITEM_EXPLOSIVE_SHELLS"
+tier = 3
+value = 100
+effects = [ ExtResource( 2 ), ExtResource( 1 ) ]
+unique = true
+max_nb = -1
+item_appearances = [  ]
+tags = [ "explosive" ]

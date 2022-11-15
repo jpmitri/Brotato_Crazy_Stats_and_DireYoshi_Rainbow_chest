@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://weapons/melee/lightning_shiv/4/lightning_shiv_4_effect_1.tres" type="Resource" id=1]
+[ext_resource path="res://weapons/melee/lightning_shiv/4/lightning_shiv_4_stats.tres" type="Resource" id=2]
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=3]
+[ext_resource path="res://weapons/melee/lightning_shiv/lightning_shiv.tscn" type="PackedScene" id=4]
+[ext_resource path="res://weapons/melee/lightning_shiv/lightning_shiv_icon.png" type="Texture" id=5]
+
+[resource]
+script = ExtResource( 3 )
+my_id = "weapon_lightning_shiv_4"
+unlocked_by_default = true
+icon = ExtResource( 5 )
+name = "WEAPON_LIGHTNING_SHIV"
+tier = 3
+value = 122
+effects = [ ExtResource( 1 ) ]
+weapon_id = "weapon_lightning_shiv"
+type = 0
+weapon_classes = [ 5, 3 ]
+scene = ExtResource( 4 )
+stats = ExtResource( 2 )

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://effects/items/turret_flame_effect.gd" type="Script" id=1]
+[ext_resource path="res://entities/structures/turret/flame/flame_turret_stats.tres" type="Resource" id=2]
+[ext_resource path="res://items/all/turret_flame/turret_flame_burning_effect.tres" type="Resource" id=3]
+[ext_resource path="res://entities/structures/turret/flame/flame_turret.tscn" type="PackedScene" id=4]
+
+[resource]
+script = ExtResource( 1 )
+key = ""
+text_key = "effect_turret_flame"
+value = 1
+effect_sign = 3
+spawn_cooldown = -1
+scene = ExtResource( 4 )
+stats = ExtResource( 2 )
+effects = [ ExtResource( 3 ) ]
+spawn_on_player = false
+shooting_animation_speed = 0.75

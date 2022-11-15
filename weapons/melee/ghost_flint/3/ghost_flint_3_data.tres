@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
+[ext_resource path="res://weapons/melee/ghost_flint/3/ghost_flint_3_stats.tres" type="Resource" id=2]
+[ext_resource path="res://weapons/melee/ghost_flint/ghost_flint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://weapons/melee/ghost_flint/ghost_flint_icon.png" type="Texture" id=4]
+[ext_resource path="res://weapons/melee/ghost_flint/4/ghost_flint_4_data.tres" type="Resource" id=5]
+[ext_resource path="res://weapons/melee/ghost_flint/3/ghost_flint_3_effect.tres" type="Resource" id=6]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "weapon_ghost_flint_3"
+unlocked_by_default = true
+icon = ExtResource( 4 )
+name = "WEAPON_GHOST_FLINT"
+tier = 2
+value = 52
+effects = [ ExtResource( 6 ) ]
+weapon_id = "weapon_ghost_flint"
+type = 0
+weapon_classes = [ 9 ]
+scene = ExtResource( 3 )
+stats = ExtResource( 2 )
+upgrades_into = ExtResource( 5 )

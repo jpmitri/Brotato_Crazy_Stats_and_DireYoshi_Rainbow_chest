@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
+[ext_resource path="res://weapons/ranged/double_barrel_shotgun/double_barrel_shotgun.tscn" type="PackedScene" id=2]
+[ext_resource path="res://weapons/ranged/double_barrel_shotgun/4/double_barrel_shotgun_4_stats.tres" type="Resource" id=3]
+[ext_resource path="res://weapons/ranged/double_barrel_shotgun/double_barrel_shotgun_icon.png" type="Texture" id=4]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "weapon_double_barrel_shotgun_4"
+unlocked_by_default = true
+icon = ExtResource( 4 )
+name = "WEAPON_DOUBLE_BARREL_SHOTGUN"
+tier = 3
+value = 149
+effects = [  ]
+weapon_id = "weapon_double_barrel_shotgun"
+type = 1
+weapon_classes = [ 0 ]
+scene = ExtResource( 2 )
+stats = ExtResource( 3 )

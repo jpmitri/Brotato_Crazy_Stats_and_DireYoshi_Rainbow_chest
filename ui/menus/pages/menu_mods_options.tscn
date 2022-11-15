@@ -1,0 +1,359 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://resources/themes/base_theme.tres" type="Theme" id=1]
+[ext_resource path="res://ui/menus/pages/menu_mods_options.gd" type="Script" id=2]
+[ext_resource path="res://ui/menus/global/my_menu_button.gd" type="Script" id=3]
+[ext_resource path="res://ui/menus/global/slider_option.tscn" type="PackedScene" id=4]
+[ext_resource path="res://resources/fonts/actual/base/font_big_title.tres" type="DynamicFont" id=5]
+
+[node name="MenuModsOptions" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+custom_constants/separation = 50
+alignment = 1
+script = ExtResource( 2 )
+
+[node name="Options" type="HBoxContainer" parent="."]
+margin_top = 158.0
+margin_right = 1920.0
+margin_bottom = 806.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Column1" type="VBoxContainer" parent="Options"]
+margin_left = 352.0
+margin_right = 1568.0
+margin_bottom = 648.0
+rect_min_size = Vector2( 600, 0 )
+size_flags_horizontal = 4
+custom_constants/separation = 25
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ModsVbox1" type="VBoxContainer" parent="Options/Column1"]
+margin_right = 1216.0
+margin_bottom = 648.0
+size_flags_vertical = 3
+custom_constants/separation = 5
+
+[node name="ModsLabel" type="Label" parent="Options/Column1/ModsVbox1"]
+margin_right = 1216.0
+margin_bottom = 73.0
+custom_fonts/font = ExtResource( 5 )
+text = "MENU_MODS_HEADER"
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/Column1/ModsVbox1"]
+margin_top = 78.0
+margin_right = 1216.0
+margin_bottom = 648.0
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FixedRerollButton" type="CheckButton" parent="Options/Column1/ModsVbox1/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 1216.0
+margin_bottom = 70.0
+focus_neighbour_bottom = NodePath("../RemoveInflationButton")
+text = "MENU_OPTIONS_FIXED_REROLL"
+
+[node name="RemoveInflationButton" type="CheckButton" parent="Options/Column1/ModsVbox1/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 75.0
+margin_right = 1216.0
+margin_bottom = 145.0
+focus_neighbour_bottom = NodePath("../ElitesDropRainbowButton")
+text = "MENU_OPTIONS_REMOVE_INFLATION"
+
+[node name="ElitesDropRainbowButton" type="CheckButton" parent="Options/Column1/ModsVbox1/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 150.0
+margin_right = 1216.0
+margin_bottom = 220.0
+focus_neighbour_bottom = NodePath("../LuckEverythingSlider")
+text = "MENU_OPTIONS_ELITES_DROP_RAINBOW"
+
+[node name="LuckEverythingSlider" parent="Options/Column1/ModsVbox1/VBoxContainer" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_top = 225.0
+margin_right = 1216.0
+margin_bottom = 270.0
+focus_neighbour_bottom = NodePath("../RainbowChestBaseSlider")
+
+[node name="Label" parent="Options/Column1/ModsVbox1/VBoxContainer/LuckEverythingSlider" index="0"]
+margin_top = 0.0
+margin_right = 682.0
+margin_bottom = 45.0
+text = "MENU_OPTIONS_LUCK_EVERYTHING"
+
+[node name="Control" parent="Options/Column1/ModsVbox1/VBoxContainer/LuckEverythingSlider" index="1"]
+margin_left = 732.0
+margin_right = 831.0
+margin_bottom = 45.0
+
+[node name="HSlider" parent="Options/Column1/ModsVbox1/VBoxContainer/LuckEverythingSlider" index="2"]
+margin_left = 881.0
+margin_right = 1081.0
+margin_bottom = 45.0
+max_value = 100.0
+step = 1.0
+value = 0.0
+rounded = true
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Value" parent="Options/Column1/ModsVbox1/VBoxContainer/LuckEverythingSlider" index="3"]
+margin_left = 1131.0
+margin_top = 0.0
+margin_right = 1216.0
+margin_bottom = 45.0
+
+[node name="RainbowChestBaseSlider" parent="Options/Column1/ModsVbox1/VBoxContainer" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_top = 275.0
+margin_right = 1216.0
+margin_bottom = 320.0
+focus_neighbour_bottom = NodePath("../ShopWeightSlider")
+
+[node name="Label" parent="Options/Column1/ModsVbox1/VBoxContainer/RainbowChestBaseSlider" index="0"]
+margin_top = 0.0
+margin_right = 781.0
+margin_bottom = 45.0
+text = "MENU_OPTIONS_RAINBOW_CHEST_BASE"
+
+[node name="Control" parent="Options/Column1/ModsVbox1/VBoxContainer/RainbowChestBaseSlider" index="1"]
+margin_left = 831.0
+margin_right = 831.0
+margin_bottom = 45.0
+
+[node name="HSlider" parent="Options/Column1/ModsVbox1/VBoxContainer/RainbowChestBaseSlider" index="2"]
+margin_left = 881.0
+margin_right = 1081.0
+margin_bottom = 45.0
+step = 0.01
+value = 0.0
+
+[node name="Value" parent="Options/Column1/ModsVbox1/VBoxContainer/RainbowChestBaseSlider" index="3"]
+margin_left = 1131.0
+margin_top = 0.0
+margin_right = 1216.0
+margin_bottom = 45.0
+
+[node name="ShopWeightSlider" parent="Options/Column1/ModsVbox1/VBoxContainer" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_top = 325.0
+margin_right = 1216.0
+margin_bottom = 370.0
+focus_neighbour_bottom = NodePath("../../../../../BackButton")
+
+[node name="Label" parent="Options/Column1/ModsVbox1/VBoxContainer/ShopWeightSlider" index="0"]
+margin_top = 0.0
+margin_right = 724.0
+margin_bottom = 45.0
+text = "MENU_OPTIONS_SHOP_WEIGHT_BASE"
+
+[node name="Control" parent="Options/Column1/ModsVbox1/VBoxContainer/ShopWeightSlider" index="1"]
+margin_left = 774.0
+margin_right = 831.0
+margin_bottom = 45.0
+
+[node name="HSlider" parent="Options/Column1/ModsVbox1/VBoxContainer/ShopWeightSlider" index="2"]
+margin_left = 881.0
+margin_right = 1081.0
+margin_bottom = 45.0
+step = 0.01
+value = 0.05
+
+[node name="Value" parent="Options/Column1/ModsVbox1/VBoxContainer/ShopWeightSlider" index="3"]
+margin_left = 1131.0
+margin_top = 0.0
+margin_right = 1216.0
+margin_bottom = 45.0
+
+[node name="EnemyMultiplier" parent="Options/Column1/ModsVbox1/VBoxContainer" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_top = 375.0
+margin_right = 1216.0
+margin_bottom = 420.0
+focus_neighbour_bottom = NodePath("../EnemyMultiplierSlider")
+
+[node name="Label" parent="Options/Column1/ModsVbox1/VBoxContainer/EnemyMultiplier" index="0"]
+margin_top = 0.0
+margin_right = 699.0
+margin_bottom = 45.0
+text = "MENU_OPTIONS_ENEMY_MULTIPLIER"
+
+[node name="Control" parent="Options/Column1/ModsVbox1/VBoxContainer/EnemyMultiplier" index="1"]
+margin_left = 749.0
+margin_right = 831.0
+margin_bottom = 45.0
+
+[node name="HSlider" parent="Options/Column1/ModsVbox1/VBoxContainer/EnemyMultiplier" index="2"]
+margin_left = 881.0
+margin_right = 1081.0
+margin_bottom = 45.0
+min_value = 0.1
+max_value = 100.0
+step = 0.5
+value = 1.0
+
+[node name="Value" parent="Options/Column1/ModsVbox1/VBoxContainer/EnemyMultiplier" index="3"]
+margin_left = 1131.0
+margin_top = 0.0
+margin_right = 1216.0
+margin_bottom = 45.0
+
+[node name="MapSize" parent="Options/Column1/ModsVbox1/VBoxContainer" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_top = 425.0
+margin_right = 1216.0
+margin_bottom = 470.0
+focus_neighbour_bottom = NodePath("../MapSizeSlider")
+
+[node name="Label" parent="Options/Column1/ModsVbox1/VBoxContainer/MapSize" index="0"]
+margin_top = 0.0
+margin_right = 324.0
+margin_bottom = 45.0
+text = "MENU_MAP_SIZE"
+
+[node name="Control" parent="Options/Column1/ModsVbox1/VBoxContainer/MapSize" index="1"]
+margin_left = 374.0
+margin_right = 831.0
+margin_bottom = 45.0
+
+[node name="HSlider" parent="Options/Column1/ModsVbox1/VBoxContainer/MapSize" index="2"]
+margin_left = 881.0
+margin_right = 1081.0
+margin_bottom = 45.0
+min_value = 0.5
+max_value = 10.0
+step = 0.1
+value = 1.0
+
+[node name="Value" parent="Options/Column1/ModsVbox1/VBoxContainer/MapSize" index="3"]
+margin_left = 1131.0
+margin_top = 0.0
+margin_right = 1216.0
+margin_bottom = 45.0
+
+[node name="MaxEnemy" parent="Options/Column1/ModsVbox1/VBoxContainer" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_top = 475.0
+margin_right = 1216.0
+margin_bottom = 520.0
+focus_neighbour_bottom = NodePath("../MaxEnemySlider")
+percent_slider = false
+postfix = " Units"
+
+[node name="Label" parent="Options/Column1/ModsVbox1/VBoxContainer/MaxEnemy" index="0"]
+margin_top = 0.0
+margin_right = 396.0
+margin_bottom = 45.0
+text = "ENEMY_COUNT_EDIT"
+
+[node name="Control" parent="Options/Column1/ModsVbox1/VBoxContainer/MaxEnemy" index="1"]
+margin_left = 446.0
+margin_right = 831.0
+margin_bottom = 45.0
+
+[node name="HSlider" parent="Options/Column1/ModsVbox1/VBoxContainer/MaxEnemy" index="2"]
+margin_left = 881.0
+margin_right = 1081.0
+margin_bottom = 45.0
+min_value = 10.0
+max_value = 5000.0
+step = 10.0
+value = 10.0
+
+[node name="Value" parent="Options/Column1/ModsVbox1/VBoxContainer/MaxEnemy" index="3"]
+margin_left = 1131.0
+margin_top = 0.0
+margin_right = 1216.0
+margin_bottom = 45.0
+
+[node name="RoundCounter" parent="Options/Column1/ModsVbox1/VBoxContainer" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_top = 525.0
+margin_right = 1216.0
+margin_bottom = 570.0
+focus_neighbour_bottom = NodePath("../RoundCounterSlider")
+
+[node name="Label" parent="Options/Column1/ModsVbox1/VBoxContainer/RoundCounter" index="0"]
+margin_top = 0.0
+margin_right = 441.0
+margin_bottom = 45.0
+text = "ROUND_COUNTER_EDIT"
+
+[node name="Control" parent="Options/Column1/ModsVbox1/VBoxContainer/RoundCounter" index="1"]
+margin_left = 491.0
+margin_right = 831.0
+margin_bottom = 45.0
+
+[node name="HSlider" parent="Options/Column1/ModsVbox1/VBoxContainer/RoundCounter" index="2"]
+margin_left = 881.0
+margin_right = 1081.0
+margin_bottom = 45.0
+min_value = 0.1
+max_value = 20.0
+step = 0.1
+value = 1.0
+
+[node name="Value" parent="Options/Column1/ModsVbox1/VBoxContainer/RoundCounter" index="3"]
+margin_left = 1131.0
+margin_top = 0.0
+margin_right = 1216.0
+margin_bottom = 45.0
+
+[node name="Column2" type="VBoxContainer" parent="Options"]
+visible = false
+margin_left = 1243.0
+margin_right = 1843.0
+margin_bottom = 273.0
+rect_min_size = Vector2( 600, 0 )
+size_flags_horizontal = 4
+custom_constants/separation = 25
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UnusedVBoxContainer" type="VBoxContainer" parent="Options/Column2"]
+margin_right = 600.0
+margin_bottom = 273.0
+size_flags_vertical = 3
+custom_constants/separation = 5
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 826.0
+margin_top = 856.0
+margin_right = 1093.0
+margin_bottom = 921.0
+size_flags_horizontal = 4
+text = "MENU_BACK"
+script = ExtResource( 3 )
+
+[connection signal="hide" from="." to="." method="_on_MenuOptions_hide"]
+[connection signal="toggled" from="Options/Column1/ModsVbox1/VBoxContainer/FixedRerollButton" to="." method="_on_FixedRerollButton_toggled"]
+[connection signal="toggled" from="Options/Column1/ModsVbox1/VBoxContainer/RemoveInflationButton" to="." method="_on_RemoveInflationButton_toggled"]
+[connection signal="toggled" from="Options/Column1/ModsVbox1/VBoxContainer/ElitesDropRainbowButton" to="." method="_on_ElitesDropRainbowButton_toggled"]
+[connection signal="value_changed" from="Options/Column1/ModsVbox1/VBoxContainer/LuckEverythingSlider" to="." method="_on_LuckEverythingSlider_value_changed"]
+[connection signal="value_changed" from="Options/Column1/ModsVbox1/VBoxContainer/RainbowChestBaseSlider" to="." method="_on_RainbowChestBaseSlider_value_changed"]
+[connection signal="value_changed" from="Options/Column1/ModsVbox1/VBoxContainer/ShopWeightSlider" to="." method="_on_ShopWeightSlider_value_changed"]
+[connection signal="value_changed" from="Options/Column1/ModsVbox1/VBoxContainer/EnemyMultiplier" to="." method="_on_EnemyMultiplier_value_change"]
+[connection signal="value_changed" from="Options/Column1/ModsVbox1/VBoxContainer/MapSize" to="." method="_on_MapSize_value_change"]
+[connection signal="value_changed" from="Options/Column1/ModsVbox1/VBoxContainer/MaxEnemy" to="." method="_on_MaxEnemy_value_change"]
+[connection signal="value_changed" from="Options/Column1/ModsVbox1/VBoxContainer/RoundCounter" to="." method="_on_RoundCounter_value_change"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+
+[editable path="Options/Column1/ModsVbox1/VBoxContainer/LuckEverythingSlider"]
+[editable path="Options/Column1/ModsVbox1/VBoxContainer/RainbowChestBaseSlider"]
+[editable path="Options/Column1/ModsVbox1/VBoxContainer/ShopWeightSlider"]
+[editable path="Options/Column1/ModsVbox1/VBoxContainer/EnemyMultiplier"]
+[editable path="Options/Column1/ModsVbox1/VBoxContainer/MapSize"]
+[editable path="Options/Column1/ModsVbox1/VBoxContainer/MaxEnemy"]
+[editable path="Options/Column1/ModsVbox1/VBoxContainer/RoundCounter"]

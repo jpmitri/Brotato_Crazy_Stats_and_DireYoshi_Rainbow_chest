@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
+[ext_resource path="res://weapons/ranged/crossbow/4/crossbow_effect_4.tres" type="Resource" id=2]
+[ext_resource path="res://weapons/ranged/crossbow/4/crossbow_stats_4.tres" type="Resource" id=3]
+[ext_resource path="res://weapons/ranged/crossbow/crossbow_icon.png" type="Texture" id=4]
+[ext_resource path="res://weapons/ranged/crossbow/crossbow.tscn" type="PackedScene" id=5]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "weapon_crossbow_4"
+unlocked_by_default = true
+icon = ExtResource( 4 )
+name = "WEAPON_CROSSBOW"
+tier = 3
+value = 140
+effects = [ ExtResource( 2 ) ]
+weapon_id = "weapon_crossbow"
+type = 1
+weapon_classes = [ 5, 13 ]
+scene = ExtResource( 5 )
+stats = ExtResource( 3 )
